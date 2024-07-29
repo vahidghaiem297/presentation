@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Presentation</title>
+</head>
+
+<body>
+    <div id="impress">
+        <!-- Existing slides -->
+
+        <div id="slide-1" class="step introduction" data-x="0" data-y="0" data-scale="0.01">
+            <h1 class="introduction__title">Welcome to My Presentation</h1>
+            <p class="introduction__text">I'm Vahid Ghaiem, and am a Frontend Developer.</p>
+        </div>
+
+        <div id="slide-2" class="step aboutSec" data-x="1000" data-rotate="90" data-y="1000">
+            <h2 class="aboutSec__title">About Me</h2>
+            <p class="aboutSec__text">I am 29 years old and i born in tehran and graduated from azad university. Then i
+                went to the military
+                base and after two years and i have 3 years experiences in the field of web developing.</p>
+        </div>
+
+        <div id="slide-3" class="step skillSec" data-x="3000" data-y="1000" data-scale="1.5" data-rotate="180">
+            <h2 class="skillSec__title">My Skills</h2>
+            <div class="skillSec__list">
+                <li>
+                    <div>
+                        <img src="img/html.png" alt="Skill 1">
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <img src="img/css.png" alt="Skill 2">
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <img src="img/js.png" alt="Skill 2">
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <img src="img/figma.png" alt="Skill 3">
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <img src="img/xd.png" alt="Skill 4">
+                    </div>
+                </li>
+
+
+
+
+
+            </div>
+
+        </div>
+
+        <div id="slide-4" class="step projectSec" data-x="-1000" data-y="0" data-scale="1" data-rotate="-90">
+            <h2 class="projectSec__title">My Work</h2>
+            <div class="projectSec__list">
+                <li>
+                    <p><a href="https://vahidghaiem297.github.io/Sass/">My First Project</a></p>
+                </li>
+                <li>
+                    <p><a href="https://vahidghaiem297.github.io/Pasargad_resturant/">My Second Project</a></p>
+                </li>
+                <li>
+                    <p><a href="https://vahidghaiem297.github.io/hello-world.github.io/">My Third Project</a></p>
+                </li>
+
+
+
+
+
+
+            </div>
+        </div>
+
+        <div id="slide-5" class="step contactSec" data-x="4000" data-y="-2000" data-scale="1" data-rotate="270">
+            <h2 class="contactSec__title">Contact Me</h2>
+            <p class="contactSec__text">You can reach me at:</p>
+            <p class="contactSec__text">Email:vahidghaiem297@gmail.com</p>
+            <p class="contactSec__text"> LinkedIn:<a href="https://www.linkedin.com/in/vahid-ghaiem-26750b221/">My
+                    LinkedIn</a></p>
+            <p class="contactSec__text">GitHub: <a href="https://github.com/">My GitHub Link</a></p>
+        </div>
+
+
+
+        <div id="slide-6" class="step" data-x="6000" data-y="6000" data-z="0" data-scale="2" data-rotate="0">
+            <h1 style="font-size: 500px; margin: 0;">V</h1>
+        </div>
+
+        <div id="slide-7" class="step" data-x="6000" data-y="6000" data-scale="0.01" data-rotate="0">
+            <h2>THE END</h2>
+            <p>I hope you enjoy my presentation.</p>
+        </div>
+
+    </div>
+    <script src="js/impress.js"></script>
+    <script>impress().init()</script>
+    <script>
+        function updateImpressPositions() {
+            const steps = document.querySelectorAll('.step');
+            const viewportWidth = window.innerWidth;
+            const viewportHeight = window.innerHeight;
+
+            steps.forEach((step) => {
+                const x = parseFloat(step.getAttribute('data-x')) || 0;
+                const y = parseFloat(step.getAttribute('data-y')) || 0;
+                const scale = parseFloat(step.getAttribute('data-scale')) || 1;
+
+                step.style.transform = `
+                    translate(-50%, -50%)
+                    translate(${x}px, ${y}px)
+                    scale(${scale})
+                `;
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            impress().init();
+            updateImpressPositions();
+
+
+            window.addEventListener('resize', updateImpressPositions);
+        });
+    </script>
+</body>
+
+</html>

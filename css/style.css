@@ -1,0 +1,159 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f0f0;
+    margin: 0;
+    overflow: hidden;
+    background-image: url(../img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.step h2 {
+    font-size: 60px;
+    margin-bottom: 40px;
+}
+
+.step p {
+    font-size: 30px;
+
+}
+
+.introduction {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.introduction__title {
+    font-size: 60px;
+    margin-bottom: 0;
+}
+
+.introduction__text {
+    font-size: 30px;
+}
+
+.aboutSec {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.aboutSec__title {
+    font-size: 60px;
+    margin-bottom: 0;
+}
+
+.aboutSec__text {
+    font-size: 30px;
+}
+
+.skillSec {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.skillSec__title {
+    font-size: 60px;
+
+}
+
+.skillSec__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+}
+
+.skillSec__list li div {
+    width: 150px;
+    height: 150px;
+    margin: 0 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 5px solid #000;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skillSec__list li div img {
+    max-width: 130px;
+    display: block;
+}
+
+
+.projectSec {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.projectSec__title {
+    font-size: 60px;
+
+}
+
+.projectSec__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    flex-direction: column;
+}
+
+
+
+.projectSec__list li a {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.projectSec__list li div img {
+    max-width: 130px;
+    display: block;
+}
+
+.contactSec {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.contactSec__title {
+    font-size: 60px;
+}
+
+.contactSec__text {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
